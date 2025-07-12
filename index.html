@@ -95,11 +95,11 @@
         }
         .driver-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
             padding: 20px;
             width: 100%;
-            max-width: 800px;
+            max-width: 1200px;
             box-sizing: border-box;
         }
         .driver-card {
@@ -126,7 +126,7 @@
         .call-btn:hover {
             background-color: #2d47a3;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             .btn {
                 padding: 10px 20px;
                 font-size: 16px;
@@ -137,6 +137,10 @@
             }
             .driver-card {
                 padding: 15px;
+            }
+            .driver-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                padding: 10px;
             }
         }
     </style>
@@ -242,7 +246,7 @@
                 container.innerHTML = `<h3>${busName} Timings</h3><p>No data available yet.</p>`;
             }
             container.innerHTML += '<div style="margin-top: 20px;"><button class="btn" onclick="showAutoPage()">🚕 Call an Auto</button></div>';
-            container.innerHTML += '<div class="disclaimer">**Bus timings can vary due to Road traffic and weather conditions</div>';
+            container.innerHTML += '<div class="disclaimer">**Bus timings can vary due to road traffic and weather conditions</div>';
             container.style.display = 'block';
         }
 
@@ -271,4 +275,3 @@
     </script>
 </body>
 </html>
-
