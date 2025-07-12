@@ -94,12 +94,12 @@
             margin-top: 15px;
         }
         .driver-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 20px;
             padding: 20px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 600px;
             box-sizing: border-box;
         }
         .driver-card {
@@ -137,10 +137,6 @@
             }
             .driver-card {
                 padding: 15px;
-            }
-            .driver-grid {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-                padding: 10px;
             }
         }
     </style>
@@ -181,7 +177,7 @@
             </div>
             <div class="driver-card">
                 <img src="auto-icon.png" alt="Auto">
-                <p>Person 2</p>
+                <p>Thomson</p>
                 <button class="call-btn" onclick="window.location.href='tel:+919746259864'">Call 📞</button>
             </div>
             <div class="driver-card">
