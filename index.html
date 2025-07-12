@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect - Bus & Auto Service</title>
     <style>
-        html, body {
+        body {
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff3300, white, #ffd900);
             font-family: Arial, sans-serif;
             text-align: center;
             color: #333;
-            background: linear-gradient(135deg, #ff3300, white, #ffd900);
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
         }
         .logo {
             margin-top: 20px;
@@ -91,23 +88,24 @@
             font-size: 12px;
             color: #555;
             font-style: italic;
-            margin-top: 15px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
         }
         .driver-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
             padding: 20px;
-            width: 100%;
+            width: 90%;
             max-width: 800px;
-            box-sizing: border-box;
+            margin: auto;
         }
         .driver-card {
             background: #fff;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-sizing: border-box;
         }
         .driver-card img {
             width: 80px;
@@ -125,16 +123,6 @@
         }
         .call-btn:hover {
             background-color: #2d47a3;
-        }
-        @media (max-width: 768px) {
-            .driver-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 480px) {
-            .driver-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -266,7 +254,6 @@
             document.getElementById('bus-info').style.display = 'none';
         }
     </script>
-</body>
 </body>
 </html>
 
