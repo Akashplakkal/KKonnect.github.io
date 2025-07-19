@@ -1,272 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect - Bus & Auto Service</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: #333;
-            background: linear-gradient(135deg, #ff3300, white, #ffd900);
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect - Bus & Auto Service</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #333;
+      background: linear-gradient(135deg, #ff3300, white, #ffd900);
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
 
-        #main-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            height: 100vh;
-        }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-        .logo {
-            margin-top: 20px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .subtext {
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: white;
-            color: #3b5bdb;
-            font-size: 18px;
-            font-weight: bold;
-            border: 2px solid #3b5bdb;
-            border-radius: 30px;
-            margin: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #f0f0f0;
-        }
-        .hidden {
-            display: none;
-        }
-        .tab-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .tab-button {
-            padding: 10px 20px;
-            margin: 5px;
-            border: 2px solid #3b5bdb;
-            background: white;
-            color: #3b5bdb;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .tab-button:hover {
-            background: #3b5bdb;
-            color: white;
-        }
-        .bus-info {
-            margin: 20px auto;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-        }
-        .bus-info ul {
-            list-style: none;
-            padding: 0;
-        }
-        .bus-info li {
-            margin: 10px 0;
-        }
-        .disclaimer {
-            font-size: 12px;
-            color: #555;
-            font-style: italic;
-            margin-top: 15px;
-        }
-        .driver-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 20px;
-            width: 100%;
-            max-width: 800px;
-            box-sizing: border-box;
-        }
-        .driver-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-sizing: border-box;
-        }
-        .driver-card img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 10px;
-        }
-        .call-btn {
-            padding: 10px 15px;
-            background: #3b5bdb;
-            color: white;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .call-btn:hover {
-            background-color: #2d47a3;
-        }
-    </style>
+    #main-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 6vw;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .subtext {
+      font-size: 3.5vw;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: white;
+      color: #3b5bdb;
+      font-size: 4vw;
+      font-weight: bold;
+      border: 2px solid #3b5bdb;
+      border-radius: 30px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f0f0f0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .tab-button {
+      padding: 8px 16px;
+      margin: 5px;
+      border: 2px solid #3b5bdb;
+      background: white;
+      color: #3b5bdb;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 4vw;
+    }
+
+    .tab-button:hover {
+      background: #3b5bdb;
+      color: white;
+    }
+
+    .bus-info {
+      margin: 20px auto;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .bus-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .bus-info li {
+      margin: 10px 0;
+      font-size: 4vw;
+    }
+
+    .disclaimer {
+      font-size: 3vw;
+      color: #555;
+      font-style: italic;
+      margin-top: 15px;
+    }
+
+    .driver-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      max-width: 800px;
+      box-sizing: border-box;
+    }
+
+    .driver-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .driver-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .driver-card p {
+      font-size: 4vw;
+      margin: 8px 0;
+    }
+
+    .call-btn {
+      padding: 10px 15px;
+      background: #3b5bdb;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 4vw;
+    }
+
+    .call-btn:hover {
+      background-color: #2d47a3;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .subtext, .btn, .tab-button, .call-btn, .driver-card p, .bus-info li, .disclaimer {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="main-menu">
-        <div class="logo">
-            <img src="logo.png" alt="Logo" width="100">
-        </div>
-        <h1>Kombathukadavu Konnect</h1>
-        <p class="subtext">A Kombathukadavu KCYM Initiative</p>
-        <button class="btn" onclick="showAutoPage()">Call an Auto →</button>
-        <button class="btn" onclick="showBusSearch()">Search for Buses →</button>
+  <div id="main-menu">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
     </div>
+    <h1>Kombathukadavu Konnect</h1>
+    <p class="subtext">A Kombathukadavu KCYM Initiative</p>
+    <button class="btn" onclick="showAutoPage()">Call an Auto →</button>
+    <button class="btn" onclick="showBusSearch()">Search for Buses →</button>
+  </div>
 
-    <div id="bus-search" class="hidden">
-        <h2>Select Bus Name</h2>
-        <div class="tab-buttons">
-            <button class="tab-button" onclick="showBusOptions('Sivapriya')">Sivapriya</button>
-            <button class="tab-button" onclick="showBusOptions('Lovelight')">Lovelight</button>
-            <button class="tab-button" onclick="showBusOptions('Brothers')">Brothers</button>
-            <button class="tab-button" onclick="showBusOptions('Cheenikkas')">Cheenikkas</button>
-            <button class="tab-button" onclick="showBusOptions('Mahamaya')">Mahamaya</button>
-            <button class="tab-button" onclick="showBusOptions('Gurunadhan')">Gurunadhan</button>
-            <button class="tab-button" onclick="showBusOptions('St. Jude')">St. Jude</button>
-        </div>
-        <div id="bus-info" class="bus-info"></div>
-        <button class="btn" onclick="goBackToMain()">⬅️ Back</button>
+  <div id="bus-search" class="hidden">
+    <h2>Select Bus Name</h2>
+    <div class="tab-buttons">
+      <button class="tab-button" onclick="showBusOptions('Sivapriya')">Sivapriya</button>
+      <button class="tab-button" onclick="showBusOptions('Lovelight')">Lovelight</button>
+      <button class="tab-button" onclick="showBusOptions('Brothers')">Brothers</button>
+      <button class="tab-button" onclick="showBusOptions('Cheenikkas')">Cheenikkas</button>
+      <button class="tab-button" onclick="showBusOptions('Mahamaya')">Mahamaya</button>
+      <button class="tab-button" onclick="showBusOptions('Gurunadhan')">Gurunadhan</button>
+      <button class="tab-button" onclick="showBusOptions('St. Jude')">St. Jude</button>
     </div>
+    <div id="bus-info" class="bus-info"></div>
+    <button class="btn" onclick="goBackToMain()">⬅️ Back</button>
+  </div>
 
-    <div id="call-auto" class="hidden">
-        <h2>Call an Auto</h2>
-        <div class="driver-grid">
-            <div class="driver-card">
-                <img src="auto-icon.png" alt="Auto">
-                <p>Akash</p>
-                <button class="call-btn" onclick="window.location.href='tel:+916238408636'">Call 📞</button>
-            </div>
-            <div class="driver-card">
-                <img src="auto-icon.png" alt="Auto">
-                <p>Person 2</p>
-                <button class="call-btn" onclick="window.location.href='tel:+919746259864'">Call 📞</button>
-            </div>
-            <div class="driver-card">
-                <img src="auto-icon.png" alt="Auto">
-                <p>Person 3</p>
-                <button class="call-btn" onclick="window.location.href='tel:+917777777777'">Call 📞</button>
-            </div>
-            <div class="driver-card">
-                <img src="auto-icon.png" alt="Auto">
-                <p>Person 4</p>
-                <button class="call-btn" onclick="window.location.href='tel:+916666666666'">Call 📞</button>
-            </div>
-        </div>
-        <button class="btn" onclick="goBackToMain()">⬅️ Back</button>
+  <div id="call-auto" class="hidden">
+    <h2>Call an Auto</h2>
+    <div class="driver-grid">
+      <div class="driver-card">
+        <img src="auto-icon.png" alt="Auto" />
+        <p>Akash</p>
+        <button class="call-btn" onclick="window.location.href='tel:+916238408636'">Call 📞</button>
+      </div>
+      <div class="driver-card">
+        <img src="auto-icon.png" alt="Auto" />
+        <p>Person 2</p>
+        <button class="call-btn" onclick="window.location.href='tel:+919746259864'">Call 📞</button>
+      </div>
+      <div class="driver-card">
+        <img src="auto-icon.png" alt="Auto" />
+        <p>Person 3</p>
+        <button class="call-btn" onclick="window.location.href='tel:+917777777777'">Call 📞</button>
+      </div>
+      <div class="driver-card">
+        <img src="auto-icon.png" alt="Auto" />
+        <p>Person 4</p>
+        <button class="call-btn" onclick="window.location.href='tel:+916666666666'">Call 📞</button>
+      </div>
     </div>
+    <button class="btn" onclick="goBackToMain()">⬅️ Back</button>
+  </div>
 
-    <script>
-        const busData = {
-            'Sivapriya': [
-                { time: '06:40 AM', destination: 'Kodungallur' },
-                { time: '07:20 AM', destination: 'Mala' },
-                { time: '10:20 AM', destination: 'Kodungallur' },
-                { time: '11:20 AM', destination: 'Mala' },
-                { time: '02:00 PM', destination: 'Kodungallur' },
-                { time: '05:00 PM', destination: 'Mala' }
-            ],
-            'Lovelight': [
-                { time: '08:00 AM', destination: 'Kodungallur' },
-                { time: '09:10 AM', destination: 'Thrissur' },
-                { time: '09:10 AM', destination: 'Irinjalakuda' },
-                { time: '01:00 PM', destination: 'Kodungallur' },
-                { time: '06:40 PM', destination: 'Kodungallur' },
-            ],
-            'Brothers': [
-                { time: '07:50 AM', destination: 'Mala' },
-                { time: '11:00 AM', destination: 'Kodungallur' },
-                { time: '11:50 AM', destination: 'Mala' },
-                { time: '03:00 PM', destination: 'Kodungallur' },
-            ],
-            'Mahamaya': [
-                { time: '06:30 AM', destination: 'Chalakudy(From Kombathukadavu Jn.)' },
-                { time: '09:30 AM', destination: 'Chalakudy(From Kombathukadavu Jn.)' },
-            ],
-            'Gurunadhan': [
-                { time: '06:45 AM', destination: 'Thrissur(From Kombathukadavu Jn.)' },
-                { time: '10:45 AM', destination: 'Kodungallur' },
-            ],
-            'Cheenikkas': [
-                { time: '10:00 AM', destination: 'Chalakudy' },
-                { time: '01:00 PM', destination: 'Chalakudy' }
-            ],
-            'St. Jude': []
-        };
+  <script>
+    const busData = {
+      'Sivapriya': [
+        { time: '06:40 AM', destination: 'Kodungallur' },
+        { time: '07:20 AM', destination: 'Mala' },
+        { time: '10:20 AM', destination: 'Kodungallur' },
+        { time: '11:20 AM', destination: 'Mala' },
+        { time: '02:00 PM', destination: 'Kodungallur' },
+        { time: '05:00 PM', destination: 'Mala' }
+      ],
+      'Lovelight': [
+        { time: '08:00 AM', destination: 'Kodungallur' },
+        { time: '09:10 AM', destination: 'Thrissur' },
+        { time: '09:10 AM', destination: 'Irinjalakuda' },
+        { time: '01:00 PM', destination: 'Kodungallur' },
+        { time: '06:40 PM', destination: 'Kodungallur' }
+      ],
+      'Brothers': [
+        { time: '07:50 AM', destination: 'Mala' },
+        { time: '11:00 AM', destination: 'Kodungallur' },
+        { time: '11:50 AM', destination: 'Mala' },
+        { time: '03:00 PM', destination: 'Kodungallur' }
+      ],
+      'Mahamaya': [
+        { time: '06:30 AM', destination: 'Chalakudy(From Kombathukadavu Jn.)' },
+        { time: '09:30 AM', destination: 'Chalakudy(From Kombathukadavu Jn.)' }
+      ],
+      'Gurunadhan': [
+        { time: '06:45 AM', destination: 'Thrissur(From Kombathukadavu Jn.)' },
+        { time: '10:45 AM', destination: 'Kodungallur' }
+      ],
+      'Cheenikkas': [
+        { time: '10:00 AM', destination: 'Chalakudy' },
+        { time: '01:00 PM', destination: 'Chalakudy' }
+      ],
+      'St. Jude': []
+    };
 
-        function showBusOptions(busName) {
-            const container = document.getElementById('bus-info');
-            if (busData[busName].length > 0) {
-                container.innerHTML = `<h3>${busName} Timings</h3><ul>` +
-                    busData[busName].map(e => `<li>${e.time} (${e.destination})</li>`).join('') +
-                    '</ul>';
-            } else {
-                container.innerHTML = `<h3>${busName} Timings</h3><p>No data available yet.</p>`;
-            }
-            container.innerHTML += '<div style="margin-top: 20px;"><button class="btn" onclick="showAutoPage()">🚕 Call an Auto</button></div>';
-            container.innerHTML += '<div class="disclaimer">**Bus timings can vary due to Road traffic and weather conditions</div>';
-            container.style.display = 'block';
-        }
+    function showBusOptions(busName) {
+      const container = document.getElementById('bus-info');
+      if (busData[busName].length > 0) {
+        container.innerHTML = `<h3>${busName} Timings</h3><ul>` +
+          busData[busName].map(e => `<li>${e.time} (${e.destination})</li>`).join('') +
+          '</ul>';
+      } else {
+        container.innerHTML = `<h3>${busName} Timings</h3><p>No data available yet.</p>`;
+      }
+      container.innerHTML += '<div style="margin-top: 20px;"><button class="btn" onclick="showAutoPage()">🚕 Call an Auto</button></div>';
+      container.innerHTML += '<div class="disclaimer">**Bus timings can vary due to Road traffic and weather conditions</div>';
+      container.style.display = 'block';
+    }
 
-        function showBusSearch() {
-            document.getElementById('main-menu').classList.add('hidden');
-            document.getElementById('call-auto').classList.add('hidden');
-            document.getElementById('bus-search').classList.remove('hidden');
-            document.getElementById('bus-info').style.display = 'none';
-        }
+    function showBusSearch() {
+      document.getElementById('main-menu').classList.add('hidden');
+      document.getElementById('call-auto').classList.add('hidden');
+      document.getElementById('bus-search').classList.remove('hidden');
+      document.getElementById('bus-info').style.display = 'none';
+    }
 
-        function showAutoPage() {
-            document.getElementById('main-menu').classList.add('hidden');
-            document.getElementById('bus-search').classList.add('hidden');
-            document.getElementById('call-auto').classList.remove('hidden');
-        }
+    function showAutoPage() {
+      document.getElementById('main-menu').classList.add('hidden');
+      document.getElementById('bus-search').classList.add('hidden');
+      document.getElementById('call-auto').classList.remove('hidden');
+    }
 
-        function goBackToMain() {
-            document.getElementById('bus-search').classList.add('hidden');
-            document.getElementById('call-auto').classList.add('hidden');
-            document.getElementById('main-menu').classList.remove('hidden');
-        }
-
-        function goBackToSearch() {
-            document.getElementById('bus-info').style.display = 'none';
-        }
-    </script>
+    function goBackToMain() {
+      document.getElementById('bus-search').classList.add('hidden');
+      document.getElementById('call-auto').classList.add('hidden');
+      document.getElementById('main-menu').classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
+
 
 
