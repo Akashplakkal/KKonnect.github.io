@@ -18,17 +18,21 @@
             text-align: center;
             color: #333;
         }
+
         .logo {
             margin-top: 20px;
         }
+
         h1 {
             font-size: 28px;
             font-weight: bold;
         }
+
         .subtext {
             font-size: 14px;
             margin-bottom: 30px;
         }
+
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -42,18 +46,22 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
         .btn:hover {
             background: #f0f0f0;
         }
+
         .hidden {
             display: none;
         }
+
         .tab-buttons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
         }
+
         .tab-button {
             padding: 10px 20px;
             margin: 5px;
@@ -64,10 +72,12 @@
             cursor: pointer;
             font-weight: bold;
         }
+
         .tab-button:hover {
             background: #3b5bdb;
             color: white;
         }
+
         .bus-info {
             margin: 20px auto;
             padding: 20px;
@@ -77,13 +87,16 @@
             max-width: 500px;
             position: relative;
         }
+
         .bus-info ul {
             list-style: none;
             padding: 0;
         }
+
         .bus-info li {
             margin: 10px 0;
         }
+
         .disclaimer {
             font-size: 12px;
             color: #555;
@@ -92,44 +105,51 @@
             bottom: 10px;
             right: 10px;
         }
+
         .driver-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
-    gap: 20px;
-    padding: 20px;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    box-sizing: border-box;
-}
-
-@media (max-width: 600px) {
-    .driver-grid {
-        grid-template-columns: 1fr; /* 1 column for mobile */
-    }
-}
-
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 30px;
+            padding: 30px;
+            width: 95%;
+            max-width: 1200px;
+            margin: auto;
+            box-sizing: border-box;
         }
+
+        @media (max-width: 600px) {
+            .driver-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .driver-card {
             background: #fff;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 15px;
             text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            font-size: 20px;
         }
+
         .driver-card img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 10px;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
         }
+
         .call-btn {
-            padding: 10px 15px;
+            padding: 15px 25px;
+            font-size: 20px;
             background: #3b5bdb;
             color: white;
             font-weight: bold;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            margin-top: 10px;
         }
+
         .call-btn:hover {
             background-color: #2d47a3;
         }
@@ -257,10 +277,6 @@
             document.getElementById('bus-search').classList.add('hidden');
             document.getElementById('call-auto').classList.add('hidden');
             document.getElementById('main-menu').classList.remove('hidden');
-        }
-
-        function goBackToSearch() {
-            document.getElementById('bus-info').style.display = 'none';
         }
     </script>
 </body>
