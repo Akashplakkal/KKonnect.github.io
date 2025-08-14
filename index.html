@@ -413,6 +413,19 @@
       document.body.classList.toggle("dark-mode");
     }
   </script>
+<!-- Register Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
+      console.log('✅ Service Worker registered with scope:', reg.scope);
+    }).catch(function(error) {
+      console.log('❌ Service Worker registration failed:', error);
+    });
+  });
+}
+</script>
 </body>
 </html>
+
 
